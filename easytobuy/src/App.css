@@ -1,0 +1,9 @@
+@media screen and (min-width: 450px) {
+    .responsive {
+        grid-template-columns: repeat(2 , minmax(0 , 1fr));
+    } 
+    
+}
+body{
+    background-color: #f3f4ff;
+}
