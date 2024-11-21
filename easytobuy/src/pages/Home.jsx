@@ -83,29 +83,29 @@ const [state , setState] = useState(0)
    Categories
 </p>
 
-<div className='w-[100%] flex justify-center items-center'>
+<div className='w-[100%] mb-16 flex justify-center items-center'>
 
 
-<div className='w-[90%]  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 mt-6 '>
-  <img src={flashdeals} alt="" />
-  <img src={beauty} alt="" />
-  <img src={fruits} alt="" />
-  <img src={breads} alt="" />
-  <img src={sunsilk} alt="" />
-  <img src={lays} alt="" />
-  <img src={dalda} alt="" />
-  <img src={chakkiata} alt="" />
-  <img src={cocacola} alt="" onClick={()=>{navigate('beverages')}} className=' cursor-pointer' />
-  <img src={tomato} alt="" />
-  <img src={deals} alt="" />
-  <img src={colgate} alt="" />
+<div className='w-[95%] pl-2 pr-2   grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 mt-6 gap-4  responsivepadding'>
+  <img src={flashdeals} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={beauty} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={fruits} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={breads} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={sunsilk} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={lays} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={dalda} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={chakkiata} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={cocacola} alt="" onClick={()=>{navigate('beverages')}} className=' cursor-pointer w-52 h-52 rounded-2xl' />
+  <img src={tomato} alt="" className='w-52 h-52 rounded-2xl ' />
+  <img src={deals} alt="" className='w-52 h-52 rounded-2xl' />
+  <img src={colgate} alt="" className='w-52 h-52 rounded-2xl' />
 </div>
 </div>
 
-<div className='flex items-center justify-center  w-[100%] mb-12 '>
+{/* <div className='flex items-center justify-center  w-[100%] mb-12 '>
 
   <p className='  text-white W-28 p-2 bg-blue-700  rounded-full font-bold'>VIEW ALL</p>
-</div>
+</div> */}
 
     
 

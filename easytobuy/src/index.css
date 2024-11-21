@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #f3f4ff;
+}
+@media (min-width: 500px ){
+
+    .responsivepadding{
+     padding-left: 32px;
+     padding-right: 32px;
+     
+    }
+}

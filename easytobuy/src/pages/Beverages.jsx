@@ -26,8 +26,11 @@ import slicelitre from '../assets/slicelitre.webp'
 import slice355ml from '../assets/slice355ml.webp'
 import slice200ml from '../assets/slice200ml.webp'
 import '../App.css'
+import { useNavigate } from 'react-router-dom';
+import Singlebeverages from './Singlebeverages';
 
 const Beverages = () => {
+    const navigate = useNavigate()
     const [state, setState] = useState(0);
     const itemsToShow = 6; // Number of items visible at a time
 
@@ -51,6 +54,115 @@ const Beverages = () => {
         'Household Supplies'
     ];
 
+    const [cart, setCart] = useState([
+       
+        { image: pepsi345ml,
+            price: 'RS.700',
+            varient: 'Pepsi 345ml (1X12)'
+            
+
+         },
+        { image: sevenup345ml,
+            price: 'RS.700',
+            varient: 'Sevenup 345ml (1X12)'
+         },
+        { image: dew300ml ,
+            price: 'RS.700',
+            varient: 'Dew 300ml (1X12)'
+         },
+        { image: mirinda345ml,
+            price: 'RS.700',
+            varient: 'Mirinda 345ml (1X12)'
+         },
+        { image: sting300ml,
+            price: 'RS.800',
+            varient: 'Sting 300ml (1X12)'
+         },
+        { image: pepsi500ml,
+            price: 'RS.1100',
+            varient: 'Pepsi 500 ml (1x12)'
+         },
+        { image: sevenup500ml,
+            price: 'RS.1100',
+            varient: '7up 500 ml (1x12)'
+         },
+        { image: dew500ml,
+            price: 'RS.1100',
+            varient: 'Dew 500 ml (1x12)'
+
+         },
+        { image: mirinda500ml,
+            price: 'RS.1100',
+            varient: 'Mirinda 500 ml (1x12)'
+         },
+        { image: sting500ml,
+            price: 'RS.1100',
+            varient: 'Sting 500 ml (1x12)'
+         },
+        { image: pepsilitre ,
+            price: 'RS.850',
+            varient: 'Pepsi Litre (1x6)'
+         },
+        { image: sevenuplitre,
+            price: 'RS.850',
+            varient: '7up Litre (1x6)'
+         },
+        { image: mirindalitre ,
+            price: 'RS.850',
+            varient: 'Mirinda Litre (1x6)'
+        },
+        { image: pepsijumbo,
+            price: 'RS.970',
+            varient: 'Pepsi Jumbo (1x4)'
+         },
+        { image: sevenupjumbo,
+             price: 'RS.970',
+            varient: '7up Jumbo (1x4)'
+         },
+        { image: dewjumbo,
+            price: 'RS.970',
+            varient: 'Dew Jumbo (1x4)'
+         },
+        { image: mirindajumbo,
+            price: 'RS.970',
+            varient: 'Mirinda Jumbo (1x4)'
+         },
+        { image: pepsi1500ml,
+            price: 'RS.1150',
+            varient: 'Pepsi 1500 ml (1x6)'
+         },
+        { image: sevenup1500ml,
+             price: 'RS.1150',
+            varient: '7up 1500 ml (1x6)'
+         },
+        { image: dew1500ml,
+             price: 'RS.1150',
+            varient: 'Dew 1500 ml (1x6)'
+         },
+        { image: mirinda1500ml,
+             price: 'RS.1150',
+            varient: 'Mirinda 1500 ml (1x6)'
+         },
+        { image: slicelitre,
+             price: 'RS.1100',
+            varient: 'Slice Litre (1x6)'
+         },
+        { image: slice355ml,
+             price: 'RS.750',
+            varient: 'Slice 355ml (1x12)'
+         },
+        { image: slice200ml,
+             price: 'RS.1100',
+            varient: 'Slice 200ml (1x24)'
+         },
+      ]);
+      
+
+
+
+
+
+
     const totalItems = text.length;
 
     // Function to move forward
@@ -61,7 +173,16 @@ const Beverages = () => {
     // Function to move backward
     const textminus = () => {
         setState((prevState) => (prevState - 1 + totalItems) % totalItems);
+
     };
+
+    function gotoNextpage(item){
+        console.log(item);
+        navigate('/Singlebeverages' , {state: {item}})
+        
+        
+
+    }
 
     return (
         <>
@@ -112,131 +233,15 @@ const Beverages = () => {
                   <p className='ml-20 mt-2 text-2xl font-bold'>Softdrinks</p>
 
 
-
-                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-6  gap-10 w-[100%]'>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4 '>
-                    <img src={pepsi345ml} alt="" className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.700 </p>
-                    <p className='text-xl font-semibold'>Pepsi 345 ml (1x12)</p>
-                    </div>
-
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={mirinda345ml} alt="" className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.700 </p>
-                    <p className='text-xl font-semibold'>Pepsi 345 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sevenup345ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.700 </p>
-                    <p className='text-xl font-semibold'>Pepsi 345 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={dew300ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.700 </p>
-                    <p className='text-xl font-semibold'>Pepsi 345 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sting300ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.800 </p>
-                    <p className='text-xl font-semibold'>Pepsi 345 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={pepsi500ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>Pepsi 500 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sevenup500ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>7up 500 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={dew500ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>Dew 500 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={mirinda500ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>Mirinda 500ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sting500ml} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1300 </p>
-                    <p className='text-xl font-semibold'>Sting 500 ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={pepsilitre} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.850 </p>
-                    <p className='text-xl font-semibold'>Pepsi Litre (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sevenuplitre} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.850 </p>
-                    <p className='text-xl font-semibold'>7up Litre (1x6)</p>
-                    </div>
-                    
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={mirindalitre} alt=""  className='rounded-2xl'  />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.850 </p>
-                    <p className='text-xl font-semibold'>Mirinda Litre (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={pepsi1500ml} alt=""  className='rounded-2xl'/>
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1150 </p>
-                    <p className='text-xl font-semibold'>Pepsi 1500 ml (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sevenup1500ml} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1150 </p>
-                    <p className='text-xl font-semibold'>7up 1500 ml (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={dew1500ml} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1150 </p>
-                    <p className='text-xl font-semibold'>Dew 1500 ml (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={mirinda1500ml} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1150 </p>
-                    <p className='text-xl font-semibold'>Mirinda 1500 ml (1x6)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={pepsijumbo} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.970 </p>
-                    <p className='text-xl font-semibold'>Pepsi Jumbo (1x4)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={sevenupjumbo} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.970 </p>
-                    <p className='text-xl font-semibold'>7up Jumbo (1x4)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={dewjumbo} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.970 </p>
-                    <p className='text-xl font-semibold'>Dew Jumbo (1x4)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={mirindajumbo} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.970 </p>
-                    <p className='text-xl font-semibold'>Mirinda Jumbo (1x4)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={slice355ml} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.750 </p>
-                    <p className='text-xl font-semibold'>Slice 355ml (1x12)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={slice200ml} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>Slice 200ml (1x24)</p>
-                    </div>
-                    <div className='flex flex-col items-start ml-auto mr-auto mt-4'>
-                    <img src={slicelitre} alt=""  className='rounded-2xl' />
-                    <p className='text-red-500 text-xl font-semibold'>Rs.1100 </p>
-                    <p className='text-xl font-semibold'>Slice Litre (1x6)</p>
-                    </div>
-                   
+                  <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-6  gap-10 w-[100%]'>
+                    {
+                        cart.map((item , index) => (
+                             <div className='flex flex-col items-start ml-auto mr-auto mt-4 cursor-pointer mb-20 ' onClick={()=>gotoNextpage(item)}> <img src={item.image} alt=""  className='rounded-2xl' />
+                             <p className='text-red-500 text-xl font-semibold'>{item.price}</p>
+                             <p className='text-xl font-semibold'>{item.varient}</p>
+                            </div>
+                        ))
+                    }
                   </div>
       
         </>

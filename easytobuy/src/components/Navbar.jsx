@@ -17,9 +17,9 @@ const Navbar = () => {
     <div className='flex gap-3 ml-auto items-center'>
 
     <img src={search} alt="" width={20} />
-    <div className='flex items-center justify-start gap-4 rounded-full w-96 h-10 border  outline-orange-200 border-blue-600 pl-4'>
+    <div className='flex items-center justify-start gap-4 rounded-full w-96 h-10 border  outline-orange-200 border-blue-600 pl-4 bg-white'>
     <FontAwesomeIcon icon={faMagnifyingGlass} className='text-gray-400' />
-    <input type="text" className=' outline-none' placeholder='Search DealCart' />
+    <input type="text" className=' outline-none w-[80%]' placeholder='Search DealCart' />
     </div>
     </div>
 

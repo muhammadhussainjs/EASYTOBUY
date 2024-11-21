@@ -6,7 +6,15 @@ export default {
   ],
   theme: {
     extend: {},
+  
+  screens: {
+    sm: '600px', // Update the 'sm' breakpoint to 600px
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
   },
+},
   plugins: [],
 }
 
