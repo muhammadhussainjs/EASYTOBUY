@@ -230,13 +230,17 @@ const Beverages = () => {
                     <img src={pepsigala} alt="" />
                   </div>
                   </div>
-                  <p className='ml-20 mt-2 text-2xl font-bold'>Softdrinks</p>
+
+                  <div className='ml-8 sm:ml-12 md:32 mt-2'>
+
+                  <p className='text-2xl font-bold'>Softdrinks</p>
+                  </div>
 
 
-                  <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-6  gap-10 w-[100%]'>
+                  <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 mt-6  w-[100%] gap-2 pl-2 pr-2 responsive-grid'>
                     {
                         cart.map((item , index) => (
-                             <div className='flex flex-col items-start ml-auto mr-auto mt-4 cursor-pointer mb-20 ' onClick={()=>gotoNextpage(item)}> <img src={item.image} alt=""  className='rounded-2xl' />
+                             <div className='flex  flex-col items-start ml-auto mr-auto mt-2 cursor-pointer mb-20 ' onClick={()=>gotoNextpage(item)}> <img src={item.image} alt=""  className='rounded-2xl' />
                              <p className='text-red-500 text-xl font-semibold'>{item.price}</p>
                              <p className='text-xl font-semibold'>{item.varient}</p>
                             </div>

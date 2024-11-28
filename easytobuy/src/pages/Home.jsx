@@ -48,12 +48,16 @@ const [state , setState] = useState(0)
 
     return () => clearInterval(interval);
   } , [image.length])
+  
+  
 
+  
   return (  
   
     <>
 
- <Navbar/>
+<Navbar />
+
 
 
 {/* image slider start */}
