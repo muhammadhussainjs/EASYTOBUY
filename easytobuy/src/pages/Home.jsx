@@ -63,8 +63,8 @@ const [state , setState] = useState(0)
 {/* image slider start */}
 
 
-<div className='mt-12 w-[100%] flex justify-center'>
-      <img src={image[state]} alt=""  className='w-[90%] h-[70%]'  />
+<div className=' w-[100%] flex justify-center'>
+      <img src={image[state]} alt=""  className='w-[90%] h-[70%] mt-28'  />
     </div>
 
 

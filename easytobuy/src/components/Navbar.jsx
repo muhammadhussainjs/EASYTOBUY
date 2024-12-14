@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className='flex justify-around mt-4'>
+    <nav className='flex justify-around  items-center  fixed w-full z-50 h-20 bg-[#f3f4ff]  '>
     <div className='ml-6'>
 
     <img src={dealcart} alt="" width={100} />

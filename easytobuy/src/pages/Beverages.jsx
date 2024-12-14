@@ -187,10 +187,10 @@ const Beverages = () => {
     return (
         <>
         
-
             <Navbar />
-            <div className='w-[100%] flex items-center justify-center'>
-            <div className="relative flex items-center mt-8 p-2 w-[90%]">
+
+            <div className='w-[100%]  flex items-center justify-center'>
+            <div className="relative flex items-center mt-28 p-2 w-[90%]">
                 {/* Previous Button */}
                 <button 
               
