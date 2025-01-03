@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useLocation  } from 'react-router-dom'
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import dealcart from '../assets/dealcart.svg'
+import axios from 'axios'
 
 const Singlebeverages = () => {
     const location = useLocation()
     const {item} = location.state || {}
     console.log(item);
     const [number , setNumber] = useState(1)
+    const inputRef = useRef()
 
     const [popup , setPopup ] = useState(false)
 
@@ -30,7 +32,15 @@ const Singlebeverages = () => {
     function closepopup(){
       setPopup(!popup)
     }
+    function sendToOtp(){
+      console.log('send to otp' , inputRef.current.value);
+      const phonenumber = inputRef.current.value
+      const response = axios.post('http://localhost:3000/' , phonenumber)
+      console.log(response.data);
+      
 
+      
+    }
 
 
   return (
@@ -119,9 +129,11 @@ const Singlebeverages = () => {
             type="text"
             placeholder="03333333333"
             className="font-semibold border rounded-lg w-96 focus:outline-none text-gray-800 text-[1.1rem] border-yellow-400 p-2"
+            ref={inputRef}
           />
           <br />
-          <button className="mb-4 bg-blue-600 items-center p-2 w-96 rounded-2xl mt-6">
+          <button className="mb-4 bg-blue-600 items-center p-2 w-96 rounded-2xl mt-6"
+          onClick={sendToOtp}>
             Login Karien
           </button>
         </div>
